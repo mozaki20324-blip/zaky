@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ZAKY - تعلّم الإيطالية بذكاء</title>
+  <meta name="description" content="ZAKY تطبيق أندرويد لتعلّم الإيطالية: قاموس شخصي، مراجعة بالبطاقات، قواعد وتمارين، وكاميرا تترجم أي نص إيطالي. مجاني وبدون إعلانات.">
+  <meta name="theme-color" content="#0f172a">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' rx='30' fill='%232563eb'/%3E%3Cpath d='M30 34H86L34 86H90' fill='none' stroke='white' stroke-width='14' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='88' cy='34' r='8' fill='%2310b981'/%3E%3Ccircle cx='32' cy='86' r='8' fill='%23f97316'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="zlogo" viewBox="0 0 120 120">
+    <path d="M30 34H86L34 86H90" fill="none" stroke="#fff" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="88" cy="34" r="8" fill="#10b981"/>
+    <circle cx="32" cy="86" r="8" fill="#f97316"/>
+    <circle cx="49" cy="60" r="3" fill="#f97316"/>
+    <circle cx="71" cy="60" r="3" fill="#f97316"/>
+    <line x1="60" y1="52" x2="60" y2="68" stroke="#f97316" stroke-width="6" stroke-linecap="round"/>
+  </symbol>
+</svg>
+
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="ZAKY">
+      <span class="logo-tile"><svg><use href="#zlogo"/></svg></span>
+      <span class="brand-name">ZAKY</span>
+    </a>
+    <nav class="nav" aria-label="Menu">
+      <a href="#features" data-ar="المميزات" data-it="Funzioni">المميزات</a>
+      <a href="#more" data-ar="وكمان" data-it="E inoltre">وكمان</a>
+      <a href="#download" data-ar="التحميل" data-it="Scarica">التحميل</a>
+    </nav>
+    <button class="lang" id="langBtn" type="button" aria-label="Language">Italiano</button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <h1 data-ar="تعلّم الإيطالية بذكاء" data-it="Impara l'italiano con intelligenza">تعلّم الإيطالية بذكاء</h1>
+      <p class="lead" data-ar="قاموسك الشخصي، مراجعة بالبطاقات، قواعد بتمارين، وكاميرا بتترجم أي نص إيطالي. كله في تطبيق واحد على موبايلك." data-it="Il tuo dizionario personale, ripasso con flashcard, grammatica con esercizi e una fotocamera che traduce qualsiasi testo italiano. Tutto in un'unica app.">قاموسك الشخصي، مراجعة بالبطاقات، قواعد بتمارين، وكاميرا بتترجم أي نص إيطالي. كله في تطبيق واحد على موبايلك.</p>
+      <div class="cta-row">
+        <a class="btn" href="https://github.com/mozaki20324-blip/zaky/releases/latest/download/ZAKY.apk">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M5 20h14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span data-ar="تحميل APK" data-it="Scarica l'APK">تحميل APK</span>
+        </a>
+        <a class="btn btn-ghost" href="#features" data-ar="شوف المميزات" data-it="Scopri le funzioni">شوف المميزات</a>
+      </div>
+      <ul class="badges">
+        <li data-ar="مجاني بالكامل" data-it="Completamente gratis">مجاني بالكامل</li>
+        <li data-ar="من غير إعلانات" data-it="Senza pubblicità">من غير إعلانات</li>
+        <li data-ar="أندرويد 7.0 فأعلى" data-it="Android 7.0 o superiore">أندرويد 7.0 فأعلى</li>
+      </ul>
+    </div>
+
+    <div class="hero-visual">
+      <figure class="phone hero-phone">
+        <div class="ph" aria-hidden="true">
+          <div class="mock mock-dark welcome">
+            <div class="w-tile"><svg><use href="#zlogo"/></svg></div>
+            <b class="w-title" data-ar="أهلًا بيك في ZAKY" data-it="Benvenuto in ZAKY">أهلًا بيك في ZAKY</b>
+            <span class="w-sub" data-ar="تعلّم الإيطالية بذكاء" data-it="Impara l'italiano con intelligenza">تعلّم الإيطالية بذكاء</span>
+            <div class="w-card">
+              <small data-ar="عبارة اليوم" data-it="Frase del giorno">عبارة اليوم</small>
+              <strong id="phraseIt" dir="ltr">Grazie mille</strong>
+              <span id="phraseAr">شكرًا جزيلًا</span>
+              <em data-ar="اسمعها" data-it="Ascolta">اسمعها</em>
+            </div>
+            <div class="w-btn" data-ar="ابدأ" data-it="Inizia">ابدأ</div>
+          </div>
+        </div>
+        <img class="shot-img" src="images/hero.png" alt="" loading="eager">
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES SHOWCASE -->
+<section id="features" class="section">
+  <div class="wrap">
+    <h2 data-ar="إيه اللي جوه ZAKY" data-it="Cosa c'è dentro ZAKY">إيه اللي جوه ZAKY</h2>
+
+    <div class="show">
+      <div class="info">
+        <div class="tabs" role="tablist" aria-label="Features">
+          <button role="tab" class="tab is-on" aria-selected="true" data-i="0" data-ar="الكلمات" data-it="Parole">الكلمات</button>
+          <button role="tab" class="tab" aria-selected="false" data-i="1" data-ar="المراجعة" data-it="Ripasso">المراجعة</button>
+          <button role="tab" class="tab" aria-selected="false" data-i="2" data-ar="الجمل" data-it="Frasi">الجمل</button>
+          <button role="tab" class="tab" aria-selected="false" data-i="3" data-ar="القواعد" data-it="Grammatica">القواعد</button>
+          <button role="tab" class="tab" aria-selected="false" data-i="4" data-ar="الكاميرا" data-it="Fotocamera">الكاميرا</button>
+          <button role="tab" class="tab" aria-selected="false" data-i="5" data-ar="الإحصائيات" data-it="Statistiche">الإحصائيات</button>
+        </div>
+
+        <div class="panel" data-i="0" role="tabpanel">
+          <h3 data-ar="قاموسك الشخصي" data-it="Il tuo dizionario personale">قاموسك الشخصي</h3>
+          <p data-ar="ضيف أي كلمة بالعربي أو بالإيطالي، والتطبيق يترجمها لك وانت تعدّل لو حابب." data-it="Aggiungi una parola in arabo o in italiano: l'app la traduce e tu puoi correggerla.">ضيف أي كلمة بالعربي أو بالإيطالي، والتطبيق يترجمها لك وانت تعدّل لو حابب.</p>
+          <ul>
+            <li data-ar="اكتب الكلمة أو قولها بصوتك" data-it="Scrivi la parola o dettala a voce">اكتب الكلمة أو قولها بصوتك</li>
+            <li data-ar="نظّم كلماتك في مجموعات ووسوم، وابحث فيها بسرعة" data-it="Organizza le parole in gruppi e tag e cercale al volo">نظّم كلماتك في مجموعات ووسوم، وابحث فيها بسرعة</li>
+            <li data-ar="شوف حالة كل كلمة: جديدة، قيد التعلم، متقنة أو صعبة" data-it="Vedi lo stato di ogni parola: nuova, in studio, padroneggiata o difficile">شوف حالة كل كلمة: جديدة، قيد التعلم، متقنة أو صعبة</li>
+            <li data-ar="كلمة اليوم بتظهر لك في الصفحة الرئيسية" data-it="La parola del giorno nella schermata principale">كلمة اليوم بتظهر لك في الصفحة الرئيسية</li>
+          </ul>
+        </div>
+        <div class="panel" data-i="1" role="tabpanel" hidden>
+          <h3 data-ar="مراجعة بتثبّت الكلمات" data-it="Un ripasso che fissa le parole">مراجعة بتثبّت الكلمات</h3>
+          <p data-ar="اسحب البطاقة يمين لو عرفتها ويسار لو نسيتها. الكلمة اللي بتنساها بترجع بعد شوية وبتتحط في «الصعبة»." data-it="Scorri a destra se la ricordi, a sinistra se l'hai dimenticata. La parola dimenticata torna dopo poco e finisce tra le «Difficili».">اسحب البطاقة يمين لو عرفتها ويسار لو نسيتها. الكلمة اللي بتنساها بترجع بعد شوية وبتتحط في «الصعبة».</p>
+          <ul>
+            <li data-ar="بطاقات بالسحب، أو اختيار من متعدد" data-it="Flashcard con swipe oppure scelta multipla">بطاقات بالسحب، أو اختيار من متعدد</li>
+            <li data-ar="راجع كل كلماتك، أو مجموعة معينة، أو الصعبة بس" data-it="Ripassa tutte le parole, un gruppo o solo le difficili">راجع كل كلماتك، أو مجموعة معينة، أو الصعبة بس</li>
+            <li data-ar="الكلمات المستحقة بس هي اللي بتظهر لك" data-it="Compaiono solo le parole da ripassare">الكلمات المستحقة بس هي اللي بتظهر لك</li>
+            <li data-ar="في آخر الجلسة تشوف نسبة الدقة" data-it="A fine sessione vedi la percentuale di precisione">في آخر الجلسة تشوف نسبة الدقة</li>
+          </ul>
+        </div>
+        <div class="panel" data-i="2" role="tabpanel" hidden>
+          <h3 data-ar="جمل تحفظها وتتدرب عليها" data-it="Frasi da salvare e su cui esercitarti">جمل تحفظها وتتدرب عليها</h3>
+          <p data-ar="اكتب جملة بالإيطالي أو بالعربي، والتطبيق يترجمها، واربطها بكلمة من كلماتك." data-it="Scrivi una frase in italiano o in arabo, l'app la traduce e puoi collegarla a una tua parola.">اكتب جملة بالإيطالي أو بالعربي، والتطبيق يترجمها، واربطها بكلمة من كلماتك.</p>
+          <ul>
+            <li data-ar="تمرين «املا الفراغ» على جملك انت" data-it="Esercizio «completa lo spazio» sulle tue frasi">تمرين «املا الفراغ» على جملك انت</li>
+            <li data-ar="نطق لكل جملة" data-it="Pronuncia per ogni frase">نطق لكل جملة</li>
+            <li data-ar="تعديل الجمل وحذفها في أي وقت" data-it="Modifica o elimina le frasi quando vuoi">تعديل الجمل وحذفها في أي وقت</li>
+            <li data-ar="نتيجتك تظهر في آخر التمرين" data-it="Il punteggio compare alla fine dell'esercizio">نتيجتك تظهر في آخر التمرين</li>
+          </ul>
+        </div>
+        <div class="panel" data-i="3" role="tabpanel" hidden>
+          <h3 data-ar="قواعد الإيطالية بالعربي" data-it="Grammatica italiana in arabo">قواعد الإيطالية بالعربي</h3>
+          <p data-ar="أربع أزمنة أساسية: Presente وPassato prossimo وImperfetto وFuturo semplice. كل زمن بشرح بسيط وأمثلة مترجمة." data-it="Quattro tempi fondamentali: Presente, Passato prossimo, Imperfetto e Futuro semplice, con spiegazioni semplici ed esempi tradotti.">أربع أزمنة أساسية: Presente وPassato prossimo وImperfetto وFuturo semplice. كل زمن بشرح بسيط وأمثلة مترجمة.</p>
+          <ul>
+            <li data-ar="جداول تصريف لأفعال مهمة زي essere وavere وandare وfare" data-it="Tabelle di coniugazione di verbi chiave come essere, avere, andare e fare">جداول تصريف لأفعال مهمة زي essere وavere وandare وfare</li>
+            <li data-ar="أنواع الأفعال: are وere وire وire-isc" data-it="Gruppi di verbi: are, ere, ire e ire-isc">أنواع الأفعال: are وere وire وire-isc</li>
+            <li data-ar="أمثلة تسمعها بالنطق الإيطالي" data-it="Esempi da ascoltare con pronuncia italiana">أمثلة تسمعها بالنطق الإيطالي</li>
+            <li data-ar="تمارين مع شرح الإجابة الصح" data-it="Esercizi con spiegazione della risposta corretta">تمارين مع شرح الإجابة الصح</li>
+          </ul>
+        </div>
+        <div class="panel" data-i="4" role="tabpanel" hidden>
+          <h3 data-ar="الكاميرا الذكية" data-it="Fotocamera intelligente">الكاميرا الذكية</h3>
+          <p data-ar="وجّه الكاميرا على أي نص إيطالي، والتطبيق يقراه، وانت تضغط على الكلمة اللي مش فاهمها." data-it="Inquadra un testo italiano: l'app lo legge e tu tocchi la parola che non capisci.">وجّه الكاميرا على أي نص إيطالي، والتطبيق يقراه، وانت تضغط على الكلمة اللي مش فاهمها.</p>
+          <ul>
+            <li data-ar="اضغط على أي كلمة في النص عشان تترجمها" data-it="Tocca una parola del testo per tradurla">اضغط على أي كلمة في النص عشان تترجمها</li>
+            <li data-ar="عدّل الترجمة واحفظها في القاموس" data-it="Correggi la traduzione e salvala nel dizionario">عدّل الترجمة واحفظها في القاموس</li>
+            <li data-ar="أول مرة بتحتاج إنترنت عشان ينزّل نموذج الترجمة" data-it="La prima volta serve internet per scaricare il modello di traduzione">أول مرة بتحتاج إنترنت عشان ينزّل نموذج الترجمة</li>
+          </ul>
+        </div>
+        <div class="panel" data-i="5" role="tabpanel" hidden>
+          <h3 data-ar="خلّيك مستمر" data-it="Mantieni la costanza">خلّيك مستمر</h3>
+          <p data-ar="شوف أيامك المتتالية وهدفك اليومي وأداءك على مدار الأسبوع." data-it="Controlla i giorni di fila, l'obiettivo giornaliero e l'andamento della settimana.">شوف أيامك المتتالية وهدفك اليومي وأداءك على مدار الأسبوع.</p>
+          <ul>
+            <li data-ar="عدّاد الأيام المتتالية" data-it="Contatore dei giorni di fila">عدّاد الأيام المتتالية</li>
+            <li data-ar="هدف يومي تغيّره بضغطة" data-it="Obiettivo giornaliero modificabile con un tocco">هدف يومي تغيّره بضغطة</li>
+            <li data-ar="رسم بياني لأداء الأسبوع، يوم بيوم" data-it="Grafico dell'andamento settimanale, giorno per giorno">رسم بياني لأداء الأسبوع، يوم بيوم</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="stage">
+        <!-- 0 Parole -->
+        <figure class="phone show-phone" data-i="0">
+          <div class="ph" aria-hidden="true"><div class="mock">
+            <div class="m-head"><b data-ar="الكلمات" data-it="Parole">الكلمات</b><span class="m-count" data-ar="38 كلمة محفوظة" data-it="38 parole salvate">38 كلمة محفوظة</span></div>
+            <div class="m-wod"><small data-ar="كلمة اليوم" data-it="Parola del giorno">كلمة اليوم</small><strong dir="ltr">Buongiorno</strong><span>صباح الخير</span></div>
+            <div class="m-search" data-ar="ابحث..." data-it="Cerca...">ابحث...</div>
+            <ul class="m-rows" dir="ltr">
+              <li><div><b>Grazie</b><span lang="ar" dir="rtl">شكرًا</span></div><i class="st ok" lang="ar" dir="rtl">متقنة</i></li>
+              <li><div><b>Scusi</b><span lang="ar" dir="rtl">لو سمحت</span></div><i class="st mid" lang="ar" dir="rtl">قيد التعلم</i></li>
+              <li><div><b>Stazione</b><span lang="ar" dir="rtl">محطة</span></div><i class="st new" lang="ar" dir="rtl">جديدة</i></li>
+              <li><div><b>Aiuto</b><span lang="ar" dir="rtl">مساعدة</span></div><i class="st hard" lang="ar" dir="rtl">صعبة</i></li>
+            </ul>
+            <div class="m-nav"><span class="on" data-ar="الكلمات" data-it="Parole">الكلمات</span><span class="fab">+</span><span data-ar="مراجعة" data-it="Ripasso">مراجعة</span></div>
+          </div></div>
+          <img class="shot-img" src="images/words.png" alt="" loading="lazy">
+        </figure>
+
+        <!-- 1 Ripasso -->
+        <figure class="phone show-phone" data-i="1" hidden>
+          <div class="ph" aria-hidden="true"><div class="mock">
+            <div class="m-head"><b data-ar="مراجعة" data-it="Ripasso">مراجعة</b><span class="m-count">3 / 12</span></div>
+            <div class="m-bar"><i style="width:25%"></i></div>
+            <div class="m-flash" dir="ltr"><small lang="ar" dir="rtl">اضغط لقلب البطاقة</small><strong>Grazie</strong><div class="m-swipe"><span class="no" lang="ar" dir="rtl">نسيتها</span><span class="yes" lang="ar" dir="rtl">عرفتها</span></div></div>
+            <p class="m-hint" data-ar="يمين = عرفتها · يسار = نسيتها" data-it="Destra = la so · Sinistra = non la so">يمين = عرفتها · يسار = نسيتها</p>
+          </div></div>
+          <img class="shot-img" src="images/review.png" alt="" loading="lazy">
+        </figure>
+
+        <!-- 2 Frasi -->
+        <figure class="phone show-phone" data-i="2" hidden>
+          <div class="ph" aria-hidden="true"><div class="mock">
+            <div class="m-head"><b data-ar="تدريب" data-it="Esercizio">تدريب</b><span class="m-count">2 / 5</span></div>
+            <div class="m-quiz" dir="ltr"><small lang="ar" dir="rtl">املا الفراغ</small><p>Noi mangiamo la <u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u> .</p><span lang="ar" dir="rtl">إحنا بناكل البيتزا.</span></div>
+            <div class="m-input" dir="ltr">pizza</div>
+            <div class="m-cta" data-ar="التالية" data-it="Avanti">التالية</div>
+          </div></div>
+          <img class="shot-img" src="images/sentences.png" alt="" loading="lazy">
+        </figure>
+
+        <!-- 3 Grammatica -->
+        <figure class="phone show-phone" data-i="3" hidden>
+          <div class="ph" aria-hidden="true"><div class="mock">
+            <div class="m-head"><b dir="ltr">Presente</b><span class="m-count" lang="ar">المضارع</span></div>
+            <div class="m-tabs2" dir="ltr"><span class="on">Presente</span><span>Passato</span><span>Imperfetto</span></div>
+            <table class="m-conj" dir="ltr"><caption>parlare (are)</caption>
+              <tr><td>io</td><td>parlo</td></tr><tr><td>tu</td><td>parli</td></tr><tr><td>lui/lei</td><td>parla</td></tr>
+              <tr><td>noi</td><td>parliamo</td></tr><tr><td>voi</td><td>parlate</td></tr><tr><td>loro</td><td>parlano</td></tr>
+            </table>
+            <div class="m-ex" dir="ltr"><b>Parlo italiano ogni giorno.</b><span lang="ar" dir="rtl">بتكلم إيطالي كل يوم.</span></div>
+          </div></div>
+          <img class="shot-img" src="images/grammar.png" alt="" loading="lazy">
+        </figure>
+
+        <!-- 4 Fotocamera -->
+        <figure class="phone show-phone" data-i="4" hidden>
+          <div class="ph" aria-hidden="true"><div class="mock mock-dark cam">
+            <div class="m-head"><b data-ar="الكاميرا الذكية" data-it="Fotocamera intelligente">الكاميرا الذكية</b></div>
+            <div class="m-paper" dir="ltr"><i></i><i class="s"></i><p>Oggi il <mark>treno</mark> parte alle otto.</p><i></i><i class="s"></i></div>
+            <p class="m-hint" data-ar="اضغط على كلمة لترجمتها" data-it="Tocca una parola per tradurla">اضغط على كلمة لترجمتها</p>
+            <div class="m-sheet" dir="ltr"><b>treno</b><span lang="ar" dir="rtl">قطار</span><em lang="ar" dir="rtl" data-ar="حفظ في القاموس" data-it="Salva nel dizionario">حفظ في القاموس</em></div>
+          </div></div>
+          <img class="shot-img" src="images/scan.png" alt="" loading="lazy">
+        </figure>
+
+        <!-- 5 Stats -->
+        <figure class="phone show-phone" data-i="5" hidden>
+          <div class="ph" aria-hidden="true"><div class="mock">
+            <div class="m-head"><b data-ar="الإحصائيات" data-it="Statistiche">الإحصائيات</b></div>
+            <div class="m-streak"><strong>7</strong><span data-ar="أيام متتالية" data-it="giorni di fila">أيام متتالية</span></div>
+            <div class="m-goal"><div><span data-ar="هدف النهاردة" data-it="Obiettivo di oggi">هدف النهاردة</span><b>12 / 20</b></div><div class="m-bar"><i style="width:60%"></i></div></div>
+            <div class="m-chart"><span data-ar="أداء الأسبوع" data-it="Andamento settimanale">أداء الأسبوع</span>
+              <div class="bars" aria-hidden="true"><i style="height:30%"></i><i style="height:55%"></i><i style="height:40%"></i><i style="height:75%"></i><i style="height:60%"></i><i style="height:90%"></i><i style="height:45%"></i></div>
+              <div class="days" lang="ar"><s>ح</s><s>ن</s><s>ث</s><s>ر</s><s>خ</s><s>ج</s><s>س</s></div>
+            </div>
+          </div></div>
+          <img class="shot-img" src="images/stats.png" alt="" loading="lazy">
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MORE -->
+<section id="more" class="section section-alt">
+  <div class="wrap">
+    <h2 data-ar="وكمان في التطبيق" data-it="E inoltre nell'app">وكمان في التطبيق</h2>
+    <div class="more-grid">
+      <article class="more">
+        <h3 data-ar="مكتبات جاهزة" data-it="Librerie pronte">مكتبات جاهزة</h3>
+        <p data-ar="8 مكتبات فيها أكتر من 170 كلمة، تثبّتها بضغطة واحدة: الحياة اليومية، العمل والتدريب، أهم الأفعال، الصفات، الوقت والأيام، الطوارئ والصحة، المطعم والبار، والميكانيكا." data-it="8 librerie con oltre 170 parole da installare con un tocco: vita quotidiana, lavoro e stage, verbi, aggettivi, tempo e giorni, emergenze e salute, ristorante e bar, meccanica.">8 مكتبات فيها أكتر من 170 كلمة، تثبّتها بضغطة واحدة: الحياة اليومية، العمل والتدريب، أهم الأفعال، الصفات، الوقت والأيام، الطوارئ والصحة، المطعم والبار، والميكانيكا.</p>
+      </article>
+      <article class="more">
+        <h3 data-ar="نطق إيطالي تتحكم فيه" data-it="Pronuncia sotto controllo">نطق إيطالي تتحكم فيه</h3>
+        <p data-ar="اسمع أي كلمة أو جملة، واختار محرك النطق والصوت الإيطالي اللي يعجبك، وغيّر السرعة من بطيء لعادي." data-it="Ascolta ogni parola o frase, scegli motore e voce italiana e regola la velocità da lenta a normale.">اسمع أي كلمة أو جملة، واختار محرك النطق والصوت الإيطالي اللي يعجبك، وغيّر السرعة من بطيء لعادي.</p>
+      </article>
+      <article class="more">
+        <h3 data-ar="استيراد كلمات من ملف" data-it="Importa parole da file">استيراد كلمات من ملف</h3>
+        <p data-ar="عندك قايمة كلمات؟ استوردها من ملف نصي أو الصقها، سطر لكل كلمة بشكل: italiano | عربي." data-it="Hai già una lista? Importala da un file di testo o incollala, una riga per parola: italiano | arabo.">عندك قايمة كلمات؟ استوردها من ملف نصي أو الصقها، سطر لكل كلمة بشكل: italiano | عربي.</p>
+      </article>
+      <article class="more">
+        <h3 data-ar="ودجت للإضافة السريعة" data-it="Widget per aggiungere subito">ودجت للإضافة السريعة</h3>
+        <p data-ar="حط زر «إضافة كلمة» على شاشة الموبايل الرئيسية، وأي كلمة جديدة تسمعها تضيفها على طول." data-it="Metti il pulsante «Aggiungi parola» nella home del telefono e aggiungi subito ogni parola nuova che senti.">حط زر «إضافة كلمة» على شاشة الموبايل الرئيسية، وأي كلمة جديدة تسمعها تضيفها في ثانيتين.</p>
+      </article>
+      <article class="more">
+        <h3 data-ar="مظهر ولغة على كيفك" data-it="Aspetto e lingua a modo tuo">مظهر ولغة على كيفك</h3>
+        <p data-ar="وضع نهاري أو ليلي أو تلقائي، وواجهة التطبيق بالعربي أو بالإيطالي." data-it="Tema chiaro, scuro o automatico, e interfaccia dell'app in arabo o in italiano.">وضع نهاري أو ليلي أو تلقائي، وواجهة التطبيق بالعربي أو بالإيطالي.</p>
+      </article>
+      <article class="more">
+        <h3 data-ar="تفاصيل صغيرة" data-it="Piccoli dettagli">تفاصيل صغيرة</h3>
+        <p data-ar="ملفك الشخصي، تأثيرات صوتية للنجاح والخطأ، وعبارة اليوم في شاشة الترحيب. وفي رسائل طمأنينة واختيارية تظهر لما تحفظ كلمة." data-it="Il tuo profilo, effetti sonori per successi ed errori e la frase del giorno nella schermata di benvenuto. Più messaggi di serenità opzionali quando salvi una parola.">ملفك الشخصي، تأثيرات صوتية للنجاح والخطأ، وعبارة جديدة كل ما تفتح التطبيق. وفي رسائل طمأنينة واختيارية تظهر لما تحفظ كلمة.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- DOWNLOAD -->
+<section id="download" class="download">
+  <div class="wrap dl-grid">
+    <div>
+      <h2 data-ar="حمّل ZAKY وابدأ النهاردة" data-it="Scarica ZAKY e inizia oggi">حمّل ZAKY وابدأ النهاردة</h2>
+      <p class="dl-note" data-ar="مجاني بالكامل ومن غير أي إعلانات. النسخة 1.0 لأجهزة أندرويد 7.0 فأعلى." data-it="Completamente gratuita e senza pubblicità. Versione 1.0 per Android 7.0 o superiore.">مجاني بالكامل ومن غير أي إعلانات. النسخة 1.0 لأجهزة أندرويد 7.0 فأعلى.</p>
+      <a class="btn" href="https://github.com/mozaki20324-blip/zaky/releases/latest/download/ZAKY.apk">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M5 20h14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span data-ar="تحميل APK" data-it="Scarica l'APK">تحميل APK</span>
+      </a>
+    </div>
+    <ol class="steps">
+      <li data-ar="حمّل ملف APK على موبايلك." data-it="Scarica il file APK sul telefono.">حمّل ملف APK على موبايلك.</li>
+      <li data-ar="افتح الملف، ولو أندرويد طلب إذن فعّل «السماح بالتثبيت من هذا المصدر»." data-it="Aprilo e, se Android lo chiede, attiva «Consenti da questa fonte».">افتح الملف، ولو أندرويد طلب إذن فعّل «السماح بالتثبيت من هذا المصدر».</li>
+      <li data-ar="اضغط تثبيت وافتح التطبيق. الكاميرا مش هتتطلب إلا لما تستخدم الكاميرا الذكية." data-it="Tocca Installa e apri l'app. La fotocamera viene richiesta solo quando usi la fotocamera intelligente.">اضغط تثبيت وافتح التطبيق. الكاميرا مش هتتطلب إلا لما تستخدم الكاميرا الذكية.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+  <div class="wrap about-in">
+    <h2 data-ar="عن المطوّر" data-it="Lo sviluppatore">عن المطوّر</h2>
+    <p class="who"><b data-ar="محمد ذكي" data-it="Mohamed Zaky">محمد ذكي</b> <span data-ar="شاب مصري مقيم في إيطاليا 🇪🇬🇮🇹" data-it="Giovane egiziano che vive in Italia 🇪🇬🇮🇹">شاب مصري مقيم في إيطاليا 🇪🇬🇮🇹</span></p>
+    <p data-ar="عندك اقتراح أو ملاحظة؟ كلّمني على:" data-it="Hai un suggerimento? Scrivimi a:">عندك اقتراح أو ملاحظة؟ كلّمني على:</p>
+    <a class="mail" href="mailto:mozaki20324@gmail.com" dir="ltr">mozaki20324@gmail.com</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap foot">
+    <span class="brand-name">ZAKY</span>
+    <span>&copy; <span id="year">2026</span> ZAKY</span>
+    <span data-ar="أندرويد قد يعرض تحذيراً عند التثبيت لأن الملف من خارج متجر Play." data-it="Android può mostrare un avviso perché il file non viene dal Play Store.">أندرويد قد يعرض تحذيراً عند التثبيت لأن الملف من خارج متجر Play.</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

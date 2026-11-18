@@ -1,0 +1,2 @@
+اختياري: لو عايز تستبدل الشاشات المرسومة بصور حقيقية من تطبيقك، حط هنا صور بهذه الأسماء بالظبط:
+hero.png  words.png  review.png  sentences.png  grammar.png  scan.png  stats.png
