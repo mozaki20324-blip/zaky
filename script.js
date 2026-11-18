@@ -68,7 +68,18 @@
     var num = document.getElementById('dlNum');
     if (!box || !num) return;
     function show(n) {
-      if (n > 0) { num.textContent = n.toLocaleString('en-US'); box.hidden = false; }
+      if (!(n > 0)) return;
+      box.hidden = false;
+      var start = null, dur = 1400;
+      function step(ts) {
+        if (start === null) start = ts;
+        var p = Math.min((ts - start) / dur, 1);
+        var e = 1 - Math.pow(1 - p, 3);
+        num.textContent = Math.round(n * e).toLocaleString('en-US');
+        if (p < 1) requestAnimationFrame(step);
+      }
+      if (window.requestAnimationFrame) requestAnimationFrame(step);
+      else num.textContent = n.toLocaleString('en-US');
     }
     var cached = null;
     try { cached = JSON.parse(sessionStorage.getItem('zaky-dl') || 'null'); } catch (e) {}

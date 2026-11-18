@@ -216,5 +216,13 @@ a { color: inherit; }
 @media (max-width: 600px) { .nav { display: none; } .lang { margin-inline-start: auto; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .w-card { transition: none; } }
 
-.dl-count { margin-top: 1rem; font-size: 1.05rem; color: rgba(255,255,255,.85); }
-.dl-count strong { color: #fff; font-size: 1.25rem; }
+/* Download counter */
+.dl-count { position: relative; display: inline-flex; align-items: center; gap: .9rem; margin-top: 1.4rem; padding: .7rem 1.4rem .7rem 1.1rem; border-radius: 999px; background: linear-gradient(135deg, rgba(255,255,255,.12), rgba(255,255,255,.04)); border: 1px solid rgba(255,255,255,.18); box-shadow: 0 8px 24px rgba(0,0,0,.25); backdrop-filter: blur(6px); animation: dlIn .6s ease both; }
+.dl-ico { width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; flex: none; color: #fff; background: linear-gradient(135deg, var(--verde), #059669); box-shadow: 0 0 0 5px rgba(16,185,129,.18); }
+.dl-txt { display: flex; flex-direction: column; line-height: 1.25; }
+.dl-txt strong { font-size: 1.9rem; font-weight: 700; color: #fff; letter-spacing: .02em; text-align: start; font-variant-numeric: tabular-nums; }
+.dl-label { font-size: .95rem; color: #cfd8e6; }
+.dl-live { width: 10px; height: 10px; border-radius: 50%; background: var(--verde); margin-inline-start: .3rem; animation: dlPulse 1.8s infinite; }
+@keyframes dlPulse { 0% { box-shadow: 0 0 0 0 rgba(16,185,129,.7); } 70% { box-shadow: 0 0 0 10px rgba(16,185,129,0); } 100% { box-shadow: 0 0 0 0 rgba(16,185,129,0); } }
+@keyframes dlIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .dl-count, .dl-live { animation: none; } }
