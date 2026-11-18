@@ -62,4 +62,29 @@
   });
 
   document.getElementById('year').textContent = new Date().getFullYear();
+  // Live download counter (sum of GitHub release downloads)
+  (function () {
+    var box = document.getElementById('dlCount');
+    var num = document.getElementById('dlNum');
+    if (!box || !num) return;
+    function show(n) {
+      if (n > 0) { num.textContent = n.toLocaleString('en-US'); box.hidden = false; }
+    }
+    var cached = null;
+    try { cached = JSON.parse(sessionStorage.getItem('zaky-dl') || 'null'); } catch (e) {}
+    if (cached && Date.now() - cached.t < 600000) { show(cached.n); return; }
+    fetch('https://api.github.com/repos/mozaki20324-blip/zaky/releases')
+      .then(function (r) { return r.ok ? r.json() : []; })
+      .then(function (list) {
+        var total = 0;
+        list.forEach(function (rel) {
+          (rel.assets || []).forEach(function (a) {
+            if (/\.apk$/i.test(a.name)) total += a.download_count || 0;
+          });
+        });
+        try { sessionStorage.setItem('zaky-dl', JSON.stringify({ n: total, t: Date.now() })); } catch (e) {}
+        show(total);
+      })
+      .catch(function () {});
+  })();
 })();

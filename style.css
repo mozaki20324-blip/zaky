@@ -215,3 +215,6 @@ a { color: inherit; }
 }
 @media (max-width: 600px) { .nav { display: none; } .lang { margin-inline-start: auto; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .w-card { transition: none; } }
+
+.dl-count { margin-top: 1rem; font-size: 1.05rem; color: rgba(255,255,255,.85); }
+.dl-count strong { color: #fff; font-size: 1.25rem; }
